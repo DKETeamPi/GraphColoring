@@ -1,0 +1,16 @@
+public class HCTester
+{
+	public static void main(String[] args)
+	{
+		int[][] vertex ={{1,3},{0,3,2},{1,3},{0,1,2}};
+		int[] length={2,3,2,3};
+		adjGraph graph =new adjGraph(vertex,length);
+		int[] coloring ={1,2,1,3};
+		int[] PlayerColoring ={2,0,0,0};
+		new HintCalculator(null,graph).kempeChainStart(0,coloring,PlayerColoring,graph);
+		for(int i=0;i<coloring.length;i++)
+		{
+			System.out.println(coloring[i]);
+		}
+	}
+}

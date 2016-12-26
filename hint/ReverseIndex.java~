@@ -1,0 +1,15 @@
+public class ReverseIndex
+{
+	public int[][] vertex;
+	public int[] length;
+	public ReverseIndex()
+	{
+		this.vertex=new int[0][0];
+		this.length=new int[0];
+	}
+	public ReverseIndex(int[][] vertex,int[] length)
+	{
+		this.vertex=vertex;
+		this.length=length;
+	}
+}

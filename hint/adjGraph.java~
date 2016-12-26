@@ -1,0 +1,29 @@
+public class adjGraph
+{
+	public int[][] vertex;
+	public int[] length;
+	public adjGraph()
+	{
+		this.vertex=new int[0][0];
+		this.length=new int[0];
+	}
+	public adjGraph(int[][] vertex,int[] length)
+	{
+		this.vertex=vertex;
+		this.length=length;
+	}
+	public adjGraph clone()
+	{
+		int[][] vertex2=new int[vertex.length][vertex[0].length];
+		int[] length2=new int[length.length];
+		for(int i=0;i<length.length;i++)
+		{
+			for(int j=0;j<vertex[0].length;j++)
+			{
+				vertex2[i][j]=vertex[i][j];
+			}
+			length2[i]=length[i];
+		}
+		return new adjGraph(vertex2,length2);
+	}
+}

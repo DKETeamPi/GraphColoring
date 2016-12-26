@@ -1,0 +1,28 @@
+public class FastArray
+{
+	int length;
+	int[] content;
+	public FastArray(int length)
+	{
+		this.length=length;
+		content=new int[length];
+	}
+	public int length()
+	{
+		return length;
+	}
+	public int get(int index)
+	{
+		return content[index];
+	}
+	public void set(int index,int a)
+	{
+		content[index]=a;
+		if (index>length){System.out.println("out of bounds!!")}
+	}
+	public void add(int a)
+	{
+		content[length]=a;
+		length++;
+	}
+}
